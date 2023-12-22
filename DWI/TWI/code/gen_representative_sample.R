@@ -3,7 +3,7 @@ library(tidyverse)
 
 set.seed(1551)
 
-df <- rio::import("C:/Users/Clement/Nextcloud/THESE CLEMENT GUICHET/SCFC/participant_data_DTI.csv")
+df <- rio::import("path/to/participant_data_DTI.csv")
 
 # save mean and sd the subsamples should have
 aimed_mean <- mean(df$age)
