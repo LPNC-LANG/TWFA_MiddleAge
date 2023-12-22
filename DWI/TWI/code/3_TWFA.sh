@@ -14,13 +14,4 @@ done
 
 
 # Concatenate volumes along axes 3 (4th dim)
-for sub in `cat subjList.txt`; do
-	cd TW_FA
-	echo "
-	##########################################################################################
-	############################## Now concatenating subject ${sub} Tracts ###################
-	##########################################################################################
-	";
-	mrcat ${sub}* ${sub}_TW_FA_Gaussian25.nii -force 
-	cd ..
-done
+mrcat * TW_FA_Gaussian25_155subj.mif.gz -axis 3
